@@ -1,13 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Site</title>
-</head>
-<body>
-  <h1>Hello world</h1>
+  <meta charset="UTF-8">
+  <title>Joe Gerjevic</title>
 
-  <button onclick="alert('it works!')">
-    Click me
-  </button>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p.bio {
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    a.button {
+      padding: 10px 16px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Joe Gerjevic</h1>
+    <p class="subtitle">Computer Science Student</p>
+
+    <p class="bio">
+      Hi, I’m a computer science student interested in software development,
+      problem solving, and building clean, useful applications.
+      I enjoy learning new technologies and improving my coding skills.
+    </p>
+
+    <div class="buttons">
+      <a class="button" href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+      <a class="button" href="#about">About Me</a>
+    </div>
+  </div>
+
 </body>
 </html>
