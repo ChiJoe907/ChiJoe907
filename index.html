@@ -7,18 +7,21 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
-      text-align: center;
     }
 
     .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     h1 {
@@ -58,37 +61,41 @@
     a.button:hover {
       background: #1d4ed8;
     }
+
+    
     .contact {
-  margin-top: 60px;
-  padding: 40px 20px;
-  background: #1e293b;
-  color: white;
-}
+      margin-top: 80px;
+      padding: 40px 20px;
+      background: #1e293b;
+      text-align: center;
+    }
 
-.contact h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+    .contact h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
 
-.reachout {
-  color: #cbd5e1;
-  max-width: 500px;
-  margin: 0 auto 20px auto;
-  line-height: 1.5;
-}
+    .reachout {
+      color: #cbd5e1;
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+    }
 
-.contact a {
-  color: #60a5fa;
-  text-decoration: none;
-}
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
 
-.contact a:hover {
-  text-decoration: underline;
-}
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
+
 
   <div class="container">
     <h1>Joe Gerjevic</h1>
@@ -102,22 +109,24 @@
 
     <div class="buttons">
       <a class="button" href="https://github.com/ChiJoe907" target="_blank">GitHub</a>
-      <a class="button" href="#about">About Me</a>
+      <a class="button" href="#contact">Contact</a>
     </div>
   </div>
-  <div class="contact">
-  <h2>Contact</h2>
 
-  <p class="reachout">
-    If you'd like to get in touch, feel free to reach out anytime.
-    I'm always open to discussing projects, ideas, or opportunities.
-  </p>
+   
+  <div class="contact" id="contact">
+    <h2>Contact</h2>
 
-  <p>
-     Email:
-    <a href="mailto:youremail@example.com">gerjevic033@gmail.com</a>
-  </p>
-</div>
+    <p class="reachout">
+      If you'd like to get in touch, feel free to reach out anytime.
+      I'm always open to discussing projects, ideas, or opportunities.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:gerjevic033@gmail.com">gerjevic033@gmail.com</a>
+    </p>
+  </div>
 
 </body>
 </html>
