@@ -145,6 +145,31 @@
   text-decoration: underline;
 }
 
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #111827;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  width: fit-content;
+  transition: 0.2s ease;
+  border: 1px solid #334155;
+}
+
+.github-button:hover {
+  background: #0b1220;
+  transform: translateY(-2px);
+}
+
+.github-button img {
+  width: 16px;
+  height: 16px;
+}
+
   </style>
 </head>
 
@@ -176,9 +201,10 @@
       This was a small game I made for my Comp 301 Course at UNC, it utilizes the MVC architecture and JavaFX for the graphical elements.
     </p>
 
-    <a href="https://github.com/ChiJoe907/Treasure-Maze" target="_blank">
-      View on GitHub
-    </a>
+    <a class="github-button" href="https://github.com/ChiJoe907/Treasure-Maze" target="_blank">
+  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
+  GitHub
+</a>
   </div>
 </div>
 
