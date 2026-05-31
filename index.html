@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <link rel="icon" type="image/png" href="pixil-frame-0.png">
@@ -6,6 +7,10 @@
   <title>im_joe</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -13,17 +18,37 @@
       color: white;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
     .container {
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 100px;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 70px;
+    }
 
     h1 {
       font-size: 48px;
@@ -46,8 +71,9 @@
 
     .buttons {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     a.button {
@@ -63,9 +89,89 @@
       background: #1d4ed8;
     }
 
-    
+    .projects {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .project-box {
+      background: #1e293b;
+      padding: 25px 20px;
+      border-radius: 10px;
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: left;
+      transition: transform 0.2s ease;
+    }
+
+    .project-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .project-box p {
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .github-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #0f172a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.2s ease;
+    }
+
+    .github-button:hover {
+      background: #0b1220;
+    }
+
+    .github-button img {
+      width: 24px;
+      height: 24px;
+      filter: invert(1);
+    }
+
+    .skills {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .skills h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .skills-box {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .skills-box p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin: 0;
+    }
+
     .contact {
-      margin-top: 80px;
+      margin-top: 100px;
       padding: 40px 20px;
       background: #1e293b;
       text-align: center;
@@ -91,138 +197,148 @@
     .contact a:hover {
       text-decoration: underline;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+
     @media (max-width: 600px) {
-  h1 {
-    font-size: 36px;
-  }
 
-  p.subtitle {
-    font-size: 18px;
-  }
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px;
+      }
 
-  .container {
-    padding-top: 60px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-    .projects {
-  margin-top: 100px;
-  text-align: center;
-}
+      h1 {
+        font-size: 36px;
+      }
 
-.projects h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+      p.subtitle {
+        font-size: 18px;
+      }
 
-.project-box {
-  background: #1e293b;
-  padding: 25px 20px;
-  border-radius: 10px;
-  max-width: 320px;
-  margin: 0 auto;
-  text-align: left;
-}
+      .container {
+        padding-top: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
 
-.project-box h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.project-box p {
-  color: #cbd5e1;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-.project-box a {
-  color: #60a5fa;
-  text-decoration: none;
-}
-
-.project-box a:hover {
-  text-decoration: underline;
-}
-
-.github-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: #1e293b;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-  width: fit-content;
-  transition: 0.2s ease;
-  border: none;
-}
-
-.github-button:hover {
-  background: #0b1220;
-  transform: translateY(-2px);
-}
-
-.github-button img {
-  width: 32px;
-  height: 32px;
-  filter: invert(1);
-}
+      .project-box,
+      .skills-box {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
 
   </style>
+
 </head>
 
 <body>
 
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/ChiJoe907" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/joe-gerjevic-536033349" target="_blank">LinkedIn</a>
+  </nav>
 
   <div class="container">
     <h1>Joe Gerjevic</h1>
-    <p class="subtitle">Computer Science Student</p>
 
-    <p class="bio">
-      Hi, I’m a computer science student interested in software development,
-      problem solving, and building clean, useful applications.
-      I enjoy learning new technologies and improving my coding skills.
-    </p>
+```
+<p class="subtitle">Computer Science Student</p>
 
-    <div class="buttons">
-      <a class="button" href="https://github.com/ChiJoe907" target="_blank">GitHub</a>
-      <a class="button" href="#contact">Contact</a>
-    </div>
-  </div>
-  
-  <div class="projects">
-  <h2>My Projects</h2>
+<p class="bio">
+  Hi, I'm a computer science student interested in software development,
+  problem solving, and building clean, useful applications.
+  I enjoy learning new technologies and improving my coding skills.
+</p>
 
-  <div class="project-box">
-    <h3>Treasure Maze</h3>
-    <p>
-      This was a small game I made for my Comp 301 Course at UNC, it utilizes the MVC architecture and JavaFX for the graphical elements.
-    </p>
+<div class="buttons">
+  <a class="button" href="https://github.com/ChiJoe907" target="_blank">
+    GitHub
+  </a>
 
-    <a class="github-button" href="https://github.com/ChiJoe907/Treasure-Maze" target="_blank">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
-  
-</a>
-  </div>
+  <a class="button" href="https://www.linkedin.com/in/joe-gerjevic-536033349" target="_blank">
+    LinkedIn
+  </a>
+
+  <a class="button" href="#projects">
+    Projects
+  </a>
 </div>
+```
 
-   
+  </div>
+
+  <div class="projects" id="projects">
+    <h2>My Projects</h2>
+
+```
+<div class="project-box">
+  <h3>Treasure Maze</h3>
+
+  <p>
+    This was a small game I made for my Comp 301 course at UNC.
+    It utilizes the MVC architecture and JavaFX for the graphical elements.
+  </p>
+
+  <a class="github-button"
+     href="https://github.com/ChiJoe907/Treasure-Maze"
+     target="_blank">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+    View Source
+  </a>
+</div>
+```
+
+  </div>
+
+  <div class="skills" id="skills">
+    <h2>Skills</h2>
+
+```
+<div class="skills-box">
+  <p>
+    Java • Python • JavaScript • HTML • CSS • Git • JavaFX • MVC
+  </p>
+</div>
+```
+
+  </div>
+
   <div class="contact" id="contact">
     <h2>Contact</h2>
 
-    <p class="reachout">
-      If you'd like to get in touch, feel free to reach out anytime.
-      I'm always open to discussing projects, ideas, or opportunities.
-    </p>
+```
+<p class="reachout">
+  If you'd like to get in touch, feel free to reach out anytime.
+  I'm always open to discussing projects, ideas, or opportunities.
+</p>
 
-    <p>
-      Email:
-      <a href="mailto:gerjevic033@gmail.com">gerjevic033@gmail.com</a>
-    </p>
+<p>
+  Email:
+  <a href="mailto:gerjevic033@gmail.com">
+    gerjevic033@gmail.com
+  </a>
+</p>
+```
+
   </div>
+
+  <footer>
+    © 2026 Joe Gerjevic
+  </footer>
 
 </body>
 </html>
